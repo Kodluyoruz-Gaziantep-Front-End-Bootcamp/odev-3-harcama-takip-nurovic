@@ -1,10 +1,15 @@
 import './App.css';
 import Pie from './Components/Pie'
+import Input from './Components/Input';
+import { GlobalProvider } from './Context/GlobalState'
 function App() {
   return (
-    <>
-      <Pie />
-    </>
+    <GlobalProvider>
+      <Input />
+      <div className="h-56">
+        <Pie />
+      </div>
+    </GlobalProvider>
   );
 }
 
