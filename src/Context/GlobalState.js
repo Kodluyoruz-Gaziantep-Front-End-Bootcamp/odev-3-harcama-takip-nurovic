@@ -4,9 +4,9 @@ import AppReducer from './AppReducer';
 // Initial state
 const initialState = {
   expence: [
-    { value: 10, color: "#E38627" },
-    { value: 15, color: "#C13C37" },
-    { value: 20, color: "#6A2135" },
+    { title: "one", value: 10, color: "#E38627" },
+    { title: "two", value: 15, color: "#C13C37" },
+    {  title: "three",value: 20, color: "#6A2135" },
   ],
 };
 
@@ -20,10 +20,9 @@ export const GlobalProvider = ({ children }) => {
   // Actions
 
   function addExpence(exp) {
-    console.log(exp)
     dispatch({
       type: 'ADD_EXPENCE',
-      payload: {value: Number(exp.value), color: exp.color}
+      payload: {value: Number(exp.value), color: exp.color, title: exp.title}
     });
   }
 
