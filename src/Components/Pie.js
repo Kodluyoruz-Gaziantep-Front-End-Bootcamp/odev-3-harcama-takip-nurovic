@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { GlobalContext } from '../Context/GlobalState';
 import { PieChart } from 'react-minimal-pie-chart';
 
 const Pie = () => {
+
+  const { expence } = useContext(GlobalContext);
+
   return (
   <PieChart
-    data={[
-      { title: 'One', value: 4, color: '#E38627' },
-      { title: 'Two', value: 15, color: '#C13C37' },
-      { title: 'Three', value: 20, color: '#6A2135' },
-    ]}
+    data={expence}
   />
   )
 }
